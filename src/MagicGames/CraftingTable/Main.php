@@ -20,6 +20,11 @@ use pocketmine\item\Armor;
 use pocketmine\Server;
 use pocketmine\Player;
 
+use libs\muqsit\invmenu\InvMenu;
+use libs\muqsit\invmenu\InvMenuHandler;
+use muqsit\invmenu\transaction\InvMenuTransaction;
+use muqsit\invmenu\transaction\InvMenuTransactionResult;
+
 class Main extends PluginBase {
 
   public function onEnable(){
