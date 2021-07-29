@@ -50,7 +50,20 @@ class Main extends PluginBase {
     $menu->setName("CRAFTING TABLE");
     $inv = $menu->getInventory();
     $inv->setItem(0, Item::get(160, 15, 1)->setCustomName("§r"));
-    $inv->setItem(1, Item::get(58, 15, 1)->setCustomName("§l§6CRAFTING TABLE"));
+    $inv->setItem(1, Item::get(58, 15, 1)->setCustomName("§r§l§eCRAFTING TABLE\n\n§r§7(Right-Click)"));
     $inv->setItem(2, Item::get(160, 15, 1)->setCustomName("§r"));
-    $inv->setItem(3, Item::get(340, 15, 1)->setCustomName("§l§6CUSTOM RECIPE"));
+    $inv->setItem(3, Item::get(340, 15, 1)->setCustomName("§r§l§eCUSTOM RECIPE\n\n§r§7(Right-Click)"));
     $inv->setItem(4, Item::get(160, 15, 1)->setCustomName("§r"));
+  }
+  public function menu1(Player $sender, Item $item)
+
+	{
+
+	      $hand = $sender->getInventory()->getItemInHand()->getCustomName();
+        $inventory = $this->mainmenu->getInventory();
+        $config = new Config($this->getDataFolder()."config.yml", Config::YAML);
+	}
+	if($item->getCustomName() === "§r§l§eCUSTOM RECIPE\n\n§r§7(Right-Click)"){
+        $sender->removeWindow($inventory);
+                    $this->getServer()->dispatchCommand($sender, $config->get("recipe"));
+                    $sender->getLevel()->broadcastLevelSoundEvent($sender->add(0, $sender->eyeHeight, 0), LevelSoundEventPacket::SOUND_CHEST_OPEN);
