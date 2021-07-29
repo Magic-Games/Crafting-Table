@@ -6,8 +6,6 @@ use pocketmine\plugin\PluginBase;
 
 use pocketmine\event\Listener;
 
-use pocketmine\utils\TextFormat;
-
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacketV2;
 use pocketmine\level\sound\AnvilUseSound;
