@@ -38,7 +38,6 @@ Class EventListener implements Listener{
 
             $ev->setCancelled();
 
-            $this->plugin->openForm($ev->getPlayer());
 
         }
 
