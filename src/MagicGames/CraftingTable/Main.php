@@ -36,7 +36,6 @@ class Main extends PluginBase implements Listener{
      $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
      $this->getLogger()->info("§aPlugin Made For MagicGames");
     //NOOP
-  }
 }
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
     switch($cmd->getName()){
