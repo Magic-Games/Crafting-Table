@@ -29,22 +29,22 @@ class Main extends PluginBase {
  
   public function onEnable(){
     if (!InvMenuHandler::isRegistered()) {
-       InvMenuHandler::register($this);
+      InvMenuHandler::register($this);
     }
   }
   
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
     if($cmd->getName() === "craftingtable"){
-			if($sender instanceof Player){
-				$this->recipes($sender);
+      if($sender instanceof Player){
+        $this->recipes($sender);
       } else {
         $sender->sendMessage("Please use this command ingame");
-			}
-		}
-	  return true;
+      }
+    }
+    return true;
   }
   
-  public function menu($player) {
+  public function CraftingTable(Player $player) {
     $menu = InvMenu::create(InvMenu::TYPE_HOPPER);
     $menu->readonly();
     $menu->setName("CRAFTING TABLE");
