@@ -44,3 +44,8 @@ class Main extends PluginBase {
 		}
 	  return true;
   }
+  public function menu($player) {
+    $menu = InvMenu::create(InvMenu::TYPE_HOPPER);
+    $menu->readonly();
+    $menu->setName("CRAFTING TABLE");
+    $inv = $menu->getInventory();
