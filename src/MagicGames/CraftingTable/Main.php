@@ -26,24 +26,24 @@ use muqsit\invmenu\transaction\InvMenuTransaction;
 use muqsit\invmenu\transaction\InvMenuTransactionResult;
 
 class Main extends PluginBase {
+ 
   public function onEnable(){
-     if (!InvMenuHandler::isRegistered()) {
+    if (!InvMenuHandler::isRegistered()) {
        InvMenuHandler::register($this);
-     }
-    //NOOP
+    }
   }
-}
+  
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
-    switch($cmd->getName()){
-			case "craftingTable":
+    if($cmd->getName() === "craftingtable"){
 			if($sender instanceof Player){
 				$this->recipes($sender);
-           } else {
-                 $sender->sendMessage("Console Cant Open InvMenu -_-");
+      } else {
+        $sender->sendMessage("Please use this command ingame");
 			}
 		}
 	  return true;
   }
+  
   public function menu($player) {
     $menu = InvMenu::create(InvMenu::TYPE_HOPPER);
     $menu->readonly();
@@ -54,3 +54,5 @@ class Main extends PluginBase {
     $inv->setItem(2, Item::get(160, 15, 1)->setCustomName("§6r"));
     $inv->setItem(3, Item::get(160, 15, 1)->setCustomName("§l§6CUSTOM RECIPE"));
     $inv->setItem(4, Item::get(160, 15, 1)->setCustomName("§r"));
+  }
+}
