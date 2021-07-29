@@ -37,8 +37,6 @@ Class EventListener implements Listener{
         if($ev->getBlock() instanceof crafting_table){
 
             $ev->setCancelled();
-
-
         }
 
     }
