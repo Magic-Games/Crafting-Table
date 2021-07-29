@@ -27,7 +27,7 @@ use libs\muqsit\invmenu\InvMenuHandler;
 use muqsit\invmenu\transaction\InvMenuTransaction;
 use muqsit\invmenu\transaction\InvMenuTransactionResult;
 
-class Main extends PluginBase {
+class Main extends PluginBase implements Listener{
   public function onEnable(){
      if (!InvMenuHandler::isRegistered()) {
        InvMenuHandler::register($this);
