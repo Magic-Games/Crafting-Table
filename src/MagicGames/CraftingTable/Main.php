@@ -35,16 +35,16 @@ class Main extends PluginBase {
 }
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
     switch($cmd->getName()){
-			case "menu":
+			case "table":
 			if($sender instanceof Player){
-				$this->menu($sender);
+				$this->table($sender);
            } else {
                  $sender->sendMessage("Console Cant Open InvMenu -_-");
 			}
 		}
 	  return true;
   }
-  public function menu($player) {
+  public function table($player) {
     $menu = InvMenu::create(InvMenu::TYPE_HOPPER);
     $menu->readonly();
     $menu->setName("CRAFTING TABLE");
