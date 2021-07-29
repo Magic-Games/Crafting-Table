@@ -32,20 +32,15 @@ class Main extends PluginBase {
      }
     //NOOP
   }
-}
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
-    switch($cmd->getName()){
-			case "craftingTable":
+ 
+    if($cmd->getName() === "craftingtable"){
 			if($sender instanceof Player){
 				$this->recipes($sender);
-           } else {
-                 $sender->sendMessage("Console Cant Open InvMenu -_-");
+      } else {
+        $sender->sendMessage("Please use this command ingame");
 			}
 		}
 	  return true;
   }
-  public function menu($player) {
-    $menu = InvMenu::create(InvMenu::TYPE_HOPPER);
-    $menu->readonly();
-    $menu->setName("CRAFTING TABLE");
-    $inv = $menu->getInventory();
+}
