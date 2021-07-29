@@ -23,6 +23,12 @@ use pocketmine\Player;
 class Main extends PluginBase {
 
   public function onEnable(){
+    if (is_null($this->getServer()->getPluginManager()->getPlugin("InvMenu"))) {
+
+            $this->getLogger()->error("§cInvMenu didnt detected disabling Craftingtable!");
+
+            $this->getServer()->getPluginManager()->disablePlugin($this);
+            return;
     //NOOP
   }
 }
