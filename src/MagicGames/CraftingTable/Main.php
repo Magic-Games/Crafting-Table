@@ -38,12 +38,7 @@ class Main extends PluginBase {
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
     switch($cmd->getName()){
 			case "table":
-			if($sender instanceof Player){
-				$this->table($sender);
-           } else {
-                 $sender->sendMessage("Console Cant Open InvMenu -_-");
 			}
-		}
 	  return true;
   }
   public function table($player) {
