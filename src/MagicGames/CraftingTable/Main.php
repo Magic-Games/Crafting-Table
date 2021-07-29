@@ -32,6 +32,9 @@ class Main extends PluginBase implements Listener{
      if (!InvMenuHandler::isRegistered()) {
        InvMenuHandler::register($this);
      }
+     $this->getServer()->getPluginManager()->registerEvents($this, $this);
+     $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
+     $this->getLogger()->info("§aPlugin Made For MagicGames");
     //NOOP
   }
 }
