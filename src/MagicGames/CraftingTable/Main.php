@@ -51,6 +51,6 @@ class Main extends PluginBase {
     $inv = $menu->getInventory();
     $inv->setItem(0, Item::get(160, 15, 1)->setCustomName("§r"));
     $inv->setItem(1, Item::get(160, 15, 1)->setCustomName("§l§6CRAFTING TABLE"));
-    $inv->setItem(2, Item::get(7, 0, 1)->setCustomName("§6r"));
-    $inv->setItem(3, Item::get(7, 0, 1)->setCustomName("§l§6CUSTOM RECIPE"));
-    $inv->setItem(4, Item::get(7, 0, 1)->setCustomName("§r"));
+    $inv->setItem(2, Item::get(160, 15, 1)->setCustomName("§6r"));
+    $inv->setItem(3, Item::get(160, 15, 1)->setCustomName("§l§6CUSTOM RECIPE"));
+    $inv->setItem(4, Item::get(160, 15, 1)->setCustomName("§r"));
