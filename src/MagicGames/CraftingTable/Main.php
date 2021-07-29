@@ -19,6 +19,8 @@ use pocketmine\item\Armor;
 
 use pocketmine\Server;
 use pocketmine\Player;
+use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat;
 
 use libs\muqsit\invmenu\InvMenu;
 use libs\muqsit\invmenu\InvMenuHandler;
