@@ -12,7 +12,7 @@ use pocketmine\Item;
 
 use pocketmine\block\crafting_table;
 
-use CraftingTable\Main;
+use MagicGames\CraftingTable\Main;
 
 Class EventListener implements Listener{
 
