@@ -37,7 +37,7 @@ class Main extends PluginBase {
     switch($cmd->getName()){
 			case "craftingTable":
 			if($sender instanceof Player){
-				$this->recipes($sender);
+				$this->menu($sender);
            } else {
                  $sender->sendMessage("Console Cant Open InvMenu -_-");
 			}
