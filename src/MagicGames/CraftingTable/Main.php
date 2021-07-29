@@ -35,7 +35,7 @@ class Main extends PluginBase {
 }
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
     switch($cmd->getName()){
-			case "craftingTable":
+			case "menu":
 			if($sender instanceof Player){
 				$this->menu($sender);
            } else {
