@@ -33,3 +33,14 @@ class Main extends PluginBase {
     //NOOP
   }
 }
+  public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
+    switch($cmd->getName()){
+			case "craftingTable":
+			if($sender instanceof Player){
+				$this->recipes($sender);
+           } else {
+                 $sender->sendMessage("Console Cant Open InvMenu -_-");
+			}
+		}
+	  return true;
+  }
